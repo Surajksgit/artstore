@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E0F7FA;
+}
+
+/* Fixed Navbar */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #070707, #180e0e);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav a {
+    color: #f39c12;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+.nav button {
+    background: #f39c12;
+    border: none;
+    padding: 8px 18px;
+    color: rgb(4, 3, 3);
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+.nav button:hover {
+    background: #f1ae41;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Sub-Navbar */
+.sub-nav {
+    position: relative;
+    top: 55px; /* Push below navbar */
+    width: 100%;
+    background: #2b2828;
+    padding: 10px 50px;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin: 0 15px;
+    color: #f39c12;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropbtn {
+    
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #2b2828;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #fcf7f7;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: #f39c12;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.search-icon {
+    margin-left: 5px;
+    color: gray;
+}
+
+/* Main Content */
+section {
+    margin-top: 120px; /* Adjust based on navbar height */
+    padding: 50px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.text-content {
+    width: 50%;
+}
+
+.text-content h1 {
+    font-size: 2.8rem;
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Shadow for h1 */
+    
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Shadow for p */
+}
+
+.text-content button {
+    background: #f39c12;
+    color: #ffafbd;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.text-content button:hover {
+    background: #f1ae41;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Carousel */
+.illustration {
+    width: 50%;
+}
+
+.carousel {
+    max-width: 400px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .text-content, .illustration {
+        width: 100%;
+    }
+
+    .sub-nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
