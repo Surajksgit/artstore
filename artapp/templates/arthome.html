@@ -39,7 +39,7 @@
                     <a href="#sketches">Sketches</a>
                     <a href="#portraits">Portraits</a>
                     <a href="#oil-paintings">Oil Paintings</a>
-                    <a href="#watercolors">Watercolors</a>
+                    <!-- <a href="#watercolors">Watercolors</a> -->
                     <a href="#digital-art">Digital Art</a>
                 </div>
             </div>
@@ -56,9 +56,9 @@
     <section>
         <div class="container">
             <div class="text-content">
-                <h1>Discover & Buy Unique Art</h1>
-                <p>Explore a collection of handpicked artwork from talented artists. Own a masterpiece today!</p>
-                <button class="btn">Explore Art</button>
+                <h1 style="margin-left: 50px;">Welcome to ArtBhavan</h1>
+                <p style="margin-left: 50px;">Explore a collection of handpicked artwork . Own a masterpiece today!</p>
+                <button class="btn" style="margin-left: 50px;">Explore Art</button>
             </div>
 
             <!-- Carousel -->
@@ -66,24 +66,42 @@
                 <div id="artCarousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{% static 'image/beachhouse.jpeg' %}" alt="Art 1">
+                            <img src="{% static 'image/beachhouse.jpeg' %}" class="d-block w-100" alt="Art 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Beach House</h5>
+                        </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'image/manwithbook.jpeg' %}" alt="Art 2">
+                            <img src="{% static 'image/manwithbook.jpeg' %}" class="d-block w-100" alt="Art 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Man with a Book</h5>
+                        </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'image/manwithhat.jpeg' %}" alt="Art 3">
+                            <img src="{% static 'image/manwithhat.jpeg' %}" class="d-block w-100" alt="Art 3">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Man with a Hat</h5>
+                        </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'image/mansion.jpeg' %}" alt="Art 4">
+                            <img src="{% static 'image/mansion.jpeg' %}" class="d-block w-100" alt="Art 4">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Mansion</h5>
+                        </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{% static 'image/sky.jpeg' %}" alt="Art 5">
+                            <img src="{% static 'image/sky.jpeg' %}" class="d-block w-100" alt="Art 5">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Sky</h5>
+                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    
 </body>
 </html>
