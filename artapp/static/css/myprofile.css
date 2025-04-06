@@ -1,0 +1,125 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4e4c4c, #4e4c4c);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: linear-gradient(to right, #232222, #0f0e0d);
+    padding: 40px;
+    max-width: 900px;
+    margin: 60px auto;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.profile-header {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #fff;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.profile-tab {
+    display: flex;
+    border-bottom: 2px solid #dee2e6;
+    margin-bottom: 30px;
+}
+
+.profile-tab a {
+    font-weight: 600;
+    color: #f39c12;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-bottom: 3px solid #dc3545;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.member-info {
+    font-size: 14px;
+    color: #888;
+}
+
+.upload-text input[type="file"] {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #dc3545;
+    background: transparent;
+    border: none;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #4e4c4c;
+    color: #fff;
+    font-size: 15px;
+    transition: border 0.3s ease-in-out;
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.05);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #f39c12;
+    background-color: #333;
+}
+
+.save-btn {
+    
+    background: #f39c12;
+    color: #333;
+    font-weight: bold;
+    margin-left: 40px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.save-btn:hover {
+    background: #4e4c4c;
+    color: #f39c12;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .profile-header {
+        font-size: 24px;
+    }
+    .save-btn {
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+}
+
