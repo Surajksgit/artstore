@@ -34,20 +34,22 @@ body {
     
 }
 
-.nav button {
+.log-btn {
     background: #f39c12;
     border: none;
     padding: 9px 20px;
-    color: rgb(4, 3, 3);
+    color: black;
     font-weight: bold;
     cursor: pointer;
     
+    
 }
-.nav button:hover {
+.log-btn:hover {
     background: #f1ae41;
     color: #fff;
     transition: color 0.3s ease-in-out;
 }
+
 
 /* Sub-Navbar */
 .sub-nav {
@@ -155,8 +157,8 @@ section {
     margin: auto;
     padding: 40px;
     background: linear-gradient(to right, #232222, #0f0e0d);
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    /* border-radius: 10px; */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     
 }
@@ -169,7 +171,7 @@ section {
 .text-content h1 {
     font-size: 2.8rem;
     color: white;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Shadow for h1 */
+    text-shadow: 3px 3px 8px rgba(3, 0, 0, 0.6); /* Shadow for h1 */
     
 }
 
@@ -177,7 +179,7 @@ section {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Shadow for p */
+    text-shadow: 2px 2px 6px rgba(6, 0, 0, 0.5); /* Shadow for p */
 }
 
 .text-content button {
@@ -193,6 +195,7 @@ section {
     background: #f1ae41;
     color: #fff;
     transition: color 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(8, 0, 0, 0.2);
     
 }
 
