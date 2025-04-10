@@ -1,3 +1,5 @@
+# artapp/views.py
+
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -10,11 +12,44 @@ from .forms import UserProfileForm
 from .models import UserProfile
 from django.contrib.auth.decorators import login_required
 from .models import UserDashboard
+from django.contrib.auth.forms import UserCreationForm
 
 
 # Create your views here.
 def home(request):
     return render(request, 'arthome.html')
+
+
+# user signup------------------------------------>
+
+def user_signup(request):
+    if request.method == 'POST':
+        identifier = request.POST.get('identifier')  # this could be email or phone
+        password = request.POST.get('password')
+        confirm_password = request.POST.get('Confirm Password')
+
+        if not identifier:
+            messages.error(request, "Identifier (email/phone) is required.")
+            return render(request, 'user_signup.html')
+
+        if password != confirm_password:
+            messages.error(request, "Passwords do not match.")
+            return render(request, 'user_signup.html')
+
+        if User.objects.filter(username=identifier).exists():
+            messages.error(request, "User already exists.")
+            return render(request, 'user_signup.html')
+
+        # Create user (using identifier as username)
+        user = User.objects.create_user(username=identifier, password=password)
+        user.save()
+
+        messages.success(request, "Account created successfully. Please log in.")
+        return redirect('login')
+
+    return render(request, 'user_signup.html')
+
+
 
 
 # user login------------------------------------>
@@ -53,7 +88,8 @@ def user_login(request):
 # user dashboard-------------------------------->
 @login_required
 def user_dashboard(request):
-    dashboard = UserDashboard.objects.get(user=request.user)
+    dashboard, created = UserDashboard.objects.get_or_create(user=request.user)
+
     return render(request, 'userdashboard.html', {'dashboard': dashboard})
 
 

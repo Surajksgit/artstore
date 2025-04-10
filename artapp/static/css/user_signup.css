@@ -1,30 +1,30 @@
-/* Global Reset & Body */
+/* General Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #4e4c4c, #4e4c4c);
-    color: white;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Reuse your navbar styles here if not globally included */
+/* Navbar Styles */
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background: linear-gradient(to right, #070707, #180e0e);
-    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
     z-index: 1000;
 }
 
@@ -41,24 +41,15 @@ body {
     color: #fff;
 }
 
-.nav strong {
-    margin-left: 70px;
-    font-size: 1.5rem;
-}
-
-/* Login Container */
+/* Container */
 .container {
-    margin-top: 140px;
-    /* max-width: 450px; */
     background: linear-gradient(to right, #232222, #0f0e0d);
+    margin-top: 60px;
     padding: 40px 30px;
-    /* border-radius: 15px; */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-    margin-left: auto;
-    margin-right: auto;
 }
 
-/* Login Content */
+/* Form Section */
 .text-content h1 {
     text-align: center;
     color: #ffffff;
@@ -67,9 +58,18 @@ body {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Inputs */
-input[type="text"],
-input[type="password"] {
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
     width: 300px;
     padding: 12px;
     margin-bottom: 20px;
@@ -83,14 +83,13 @@ input[type="password"] {
     transition: border 0.3s ease-in-out;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+form input:focus {
     outline: none;
     border: 1px solid #f39c12;
     background-color: #333;
 }
 
-/* Button */
+/* Submit Button */
 button.btn {
     width: 300px;
     background: #f39c12;
@@ -111,36 +110,23 @@ button.btn:hover {
     
 }
 
-/* Forgot Password */
+/* Login Link */
 .text-content p {
-    margin-top: 15px;
     text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
 }
 
 .text-content p a {
-    color: #1277f3;
+    color: #007bff;
     text-decoration: none;
-    transition: 0.3s ease;
-    font-size: 14px;
 }
 
 .text-content p a:hover {
     text-decoration: underline;
 }
 
-/* Responsive */
-@media screen and (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 30px 20px;
-    }
-
-    .text-content h1 {
-        font-size: 2rem;
-    }
-}
-
-/* divider */
+/* Divider */
 .divider {
     text-align: center;
     margin: 20px 0;
@@ -167,46 +153,38 @@ button.btn:hover {
     z-index: 0;
 }
 
+/* Social Buttons */
 .social-login {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 10px;
 }
 
-.google-btn, .apple-btn {
+.google-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #2d2d2d;
-    color: white;
+    padding: 10px;
+    border-radius: 10px;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
     font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    max-width: 300px;
+    margin-left: 40px;
 }
 
+.google-btn {
+    background-color: #4e4c4c;
+    border: 1px solid #4e4c4c;
+}
 .google-btn:hover {
-    background-color: #db4437;
+    background-color:  #070707;
+    color: #fff;
+    border: 1px solid  #070707;
+    transition: all 0.3s ease;
 }
 
-.apple-btn:hover {
-    background-color: #000000;
-}
 
-.google-btn img,
-.apple-btn img {
-    vertical-align: middle;
-}
-.tosignup{
-    color: #1277f3;
-    text-decoration: none;
-    transition: 0.3s ease;
-    font-size: 14px;
-}
-.tosignup:hover{
-    text-decoration: underline;
-    
-}

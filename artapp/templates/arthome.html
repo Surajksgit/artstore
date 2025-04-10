@@ -27,8 +27,8 @@
         <div>
             <a href="#about">About</a>
             <a href="#gallery">Gallery</a>
-            <a href="#contact" style="margin-right: 50px;">Contact</a>
-            <a href="{% url 'login' %}" style="color: #333;" class="login-btn">Login</a>
+            <a href="#contact" >Contact</a>
+            
         </div>
     </nav>
 
@@ -56,6 +56,13 @@
             <input type="text" class="search-bar" placeholder="Search for artworks...">
             <i class="fa fa-search search-icon"></i>
         </div>
+        <div class="logd">
+            <a  class="login-btn" style=" color: #222; text-decoration: none;" >Login</a>
+            <div class="logd-content">
+              <a href="{% url 'login' %}">Login</a>
+              <a href="{% url 'user_signup' %}">Signup</a>
+            </div>
+          </div>
     </div>
 
     <!-- Main Content -->

@@ -64,8 +64,9 @@ body {
     padding: 40px 50px;
 }
 
-.dashboard-content h2 {
+.dashboard-content h2 ,p{
     font-weight: bold;
+    color: #fff;
 }
 /* Dropdown */
 .dropdown {
